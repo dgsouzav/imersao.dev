@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="aula02.css" media="screen" />
+    <title>
+        Aula 02
+    </title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="page-title">
+            Calculadora
+        </h1>
+        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-calculadora.svg" class="page-logo"
+            alt="">
+        <div class="calculadora">
+        </div>
+    </div>
+    <a href="https://alura.com.br/" target="_blank">
+        <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+    </a>
+    <h2></h2>
+    <script>
+      var primeiroValor = parseInt(prompt("Digite o primeiro valor:"))
+var segundoValor = parseInt(prompt("Digite o segundo valor:"))
+
+
+var operacao = prompt("Digite 1 para fazer uma divisao, 2 para multiplicacao, 3 para soma e 4 para subtracao")
+
+if (operacao == 1) {
+  var resultado = primeiroValor / segundoValor
+  document.write("<h2>" + primeiroValor + " / " +     segundoValor + " = " + resultado + "</h2>")  
+} else if (operacao == 2){
+  var resultado = primeiroValor * segundoValor
+  document.write("<h2>" + primeiroValor + " * " +     segundoValor + " = " + resultado + "</h2>")  
+} else if (operacao == 3){
+  var resultado = primeiroValor + segundoValor
+  document.write("<h2>" + primeiroValor + " + " +     segundoValor + " = " + resultado + "</h2>")  
+} else if (operacao == 4){
+  var resultado = primeiroValor - segundoValor
+  document.write("<h2>" + primeiroValor + " - " +     segundoValor + " = " + resultado + "</h2>")  
+} else {
+  document.write("<h2>Opcao invalida!</h2>")
+}
+
+    </script>
+</body>
+
+</html>
