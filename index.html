@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="aula01.css" media="screen" />
+        <title>
+            Aula01
+        </title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="page-title">
+                <span>Conversor de Moedas</span>
+            </h1>
+            <p class="page-subtitle">
+                <span>Digite o valor em Dolar U$</span> 
+            </p>
+            <span>
+                <img 
+                src ="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt="">
+            </span>
+        </div>
+    </body>
+    <script>
+        var valorEmDolarTexto = prompt("Qual o valor em dolar que voce quer converter?")
+        
+        var valorEmDolarNumero = parseFloat(valorEmDolarTexto)
+
+        var valorEmReal = valorEmDolarNumero * 5.56
+        var valorEmRealFixado = valorEmReal.toFixed(2)
+
+        alert(valorEmRealFixado)
+    </script>
+</html>
