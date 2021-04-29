@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="aula06.css" media="screen" />
+    <title>
+        Aula 06
+    </title>
+</head>
+
+<body>
+    <h1>Classificação Campeonato Carioca</h1>
+
+    <table style="width:100%">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Vitórias</th>
+                <th>Empates</th>
+                <th>Derrotas</th>
+                <th>Pontos</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaJogadores">
+        </tbody>
+    </table>
+    <script>
+        var flamengo = {
+nome: "Flamengo",
+vitorias: 0,
+empates: 0,
+derrotas: 0,
+pontos: 0,
+}
+var fluminense = {
+nome: "Fluminense",
+vitorias: 0,
+empates: 0,
+derrotas: 0,
+pontos: 0,
+}
+var vasco = {
+nome: "Vasco",
+vitorias: 0,
+empates: 0,
+derrotas: 0,
+pontos: 0,
+}
+var botafogo = {
+nome: "Botafogo",
+vitorias: 0,
+empates: 0,
+derrotas: 0,
+pontos: 0,
+}
+
+var voltaRedonda = {
+nome: "Volta Redonda",
+vitorias: 0,
+empates: 0,
+derrotas: 0,
+pontos: 0,
+}
+
+var macae = {
+nome: "Macaé",
+vitorias: 0,
+empates: 0,
+derrotas: 0,
+pontos: 0,
+}
+
+var resende = {
+nome: "Resende",
+vitorias: 0,
+empates: 0,
+derrotas: 0,
+pontos: 0,
+}
+
+var bangu = {
+nome: "Bangu",
+vitorias: 0,
+empates: 0,
+derrotas: 0,
+pontos: 0,
+}
+
+var madureira = {
+nome: "Madureira",
+vitorias: 0,
+empates: 0,
+derrotas: 0,
+pontos: 0,
+}
+
+var portuguesa = {
+nome: "Portuguesa",
+vitorias: 0,
+empates: 0,
+derrotas: 0,
+pontos: 0,
+}
+
+var novaIguacu = {
+nome: "Nova Iguaçú",
+vitorias: 0,
+empates: 0,
+derrotas: 0,
+pontos: 0,
+}
+
+var boavista = {
+nome: "Boavista",
+vitorias: 0,
+empates: 0,
+derrotas: 0,
+pontos: 0,
+}
+
+flamengo.pontos = calculaPontos(flamengo)
+fluminense.pontos = calculaPontos(fluminense)
+vasco.pontos = calculaPontos(vasco)
+botafogo.pontos = calculaPontos(botafogo)
+madureira.pontos = calculaPontos(madureira)
+voltaRedonda.pontos = calculaPontos(voltaRedonda)
+bangu.pontos = calculaPontos(bangu)
+resende.pontos = calculaPontos(resende)
+novaIguacu.pontos = calculaPontos(novaIguacu)
+portuguesa.pontos = calculaPontos(portuguesa)
+boavista.pontos = calculaPontos(boavista)
+macae.pontos = calculaPontos(macae)
+
+function calculaPontos(jogador) {
+var pontos = (jogador.vitorias * 3) + jogador.empates
+return pontos
+}
+
+var jogadores = [botafogo, flamengo, fluminense, vasco, madureira, voltaRedonda, bangu, resende, novaIguacu, portuguesa, boavista, macae] 
+
+exibirJogadoresNaTela(jogadores)
+
+function exibirJogadoresNaTela(jogadores){
+var html = ""
+for(var i=0; i < jogadores.length; i++){
+html += "<tr><td>" + jogadores[i].nome + "</td>"
+html += "<td>" + jogadores[i].vitorias + "</td>"
+html += "<td>" + jogadores[i].empates + "</td>"
+html += "<td>" + jogadores[i].derrotas + "</td>"
+html += "<td>" + jogadores[i].pontos + "</td>"
+html +=  "<td><button onClick='adicionarVitoria(" + i + ")'>Vitória</button></td>"
+html +=  "<td><button onClick='adicionarEmpate(" + i + ")'>Empate</button></td>"
+html += "<td><button onClick='adicionarDerrota(" + i + ")'>Derrota</button></td></tr>"
+}
+var tabelaJogadores = document.getElementById("tabelaJogadores")
+tabelaJogadores.innerHTML = html
+}
+function adicionarVitoria(i) {
+var jogador = jogadores[i]
+jogador.vitorias++
+jogador.pontos = calculaPontos(jogador)
+exibirJogadoresNaTela(jogadores)
+}
+function adicionarEmpate(i) { var jogador = jogadores[i]
+jogador.empates++
+jogador.pontos = calculaPontos(jogador)
+exibirJogadoresNaTela(jogadores)
+
+}
+function adicionarDerrota(i) {var jogador = jogadores[i]
+jogador.derrotas++
+exibirJogadoresNaTela(jogadores)
+                          
+}
+
+    </script>
+</body>
+
+</html>
