@@ -13,7 +13,7 @@ Todo repositório do que aprendi na Imersão de HTML, CSS e JavaScript.
 7. Super Trunfo
 8. Super Trunfo 2.0
 9. Super Trunfo 3.0
-10. Certificard
+10. Certificard(projeto em repositório individual)
 
 ## Sobre os projetos.
 
